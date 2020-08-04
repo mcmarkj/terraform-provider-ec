@@ -3,7 +3,7 @@ provider "ec" {}
 resource "ec_deployment" "this" {
   name                = "hello-kitty"
   region              = "gcp-europe-west1"
-  version             = "7.8.0"
+  version             = "7.8.1"
   template_id         = "gcp-io-optimized"
   data_node           = true
   master_node         = true
@@ -11,7 +11,7 @@ resource "ec_deployment" "this" {
   ml_node             = false
   elastic_instance_id = "gcp.data.highio.1"
   elastic_zone_count  = 1
-  elastic_node_memory = 1024
+  elastic_node_memory = 2048
 }
 
 output "cluster_user" {

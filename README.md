@@ -38,9 +38,9 @@ Obviously, you can set up it in your terrafrom code, but it's not recommended to
 ```sh
 
 provider "ec" {
-	url 	 = "https://api.elastic-cloud.com"
-	api_key  = "Qwerty12345678"
-	insecure = false
+  url      = "https://api.elastic-cloud.com"
+  api_key  = "Qwerty12345678"
+  insecure = false
 }
 
 # Min usage:

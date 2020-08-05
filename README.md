@@ -19,13 +19,6 @@ $ ./build_docker.sh
 
 At the end, you'll get binary file `terraform-provider-ec`.
 
-Download binary file `terraform-provider-ec` for current OS
-
-```sh
-$ ./download_binary.sh {{release_version}}
-
-```
-
 ## Usage
 
 - To start using compiled plugin `terraform-provider-ec` you have to place this file into your working directory with Terrafrom code or use [other path](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins).

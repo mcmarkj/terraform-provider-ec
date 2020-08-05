@@ -1,6 +1,12 @@
 #!/bin/bash
 
-RELEASE_VERSION="0.1.0"
+############################################################################################
+#
+# This script downloads terraform provider binary for current OS
+#
+############################################################################################
+
+RELEASE_VERSION=${1:-0.1.0}
 PROVIDER_NAME="terraform-provider-ec"
 TERRAFORM_PLUGIN_DIRECTORY="$HOME/.terraform.d/plugins"
 
@@ -14,6 +20,10 @@ echo "Downloading binary plugin from $BINARY_PATH to $TERRAFORM_PLUGIN_DIRECTORY
 
 mkdir $TERRAFORM_PLUGIN_DIRECTORY
 wget -cO - $BINARY_PATH > $TERRAFORM_PLUGIN_DIRECTORY/$PROVIDER_NAME
+if [[ $? != 0 ]]; then
+  echo "Error during provider downloading"
+  exit 1
+fi
 chmod a+x $TERRAFORM_PLUGIN_DIRECTORY/$PROVIDER_NAME
 
 echo "$PROVIDER_NAME downloaded successfully"

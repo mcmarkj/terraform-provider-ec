@@ -22,6 +22,11 @@ At the end, you'll get binary file `terraform-provider-ec`.
 ## Usage
 
 - To start using compiled plugin `terraform-provider-ec` you have to place this file into your working directory with Terrafrom code or use [other path](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins).
+  - command to download binary file `terraform-provider-ec` for current OS in `$HOME/.terraform.d/plugins` directory:
+```sh
+$ ./download_binary.sh {{release_version}}
+
+```
 - Elasticsearch Service supports only API key-based [authentication](https://www.elastic.co/guide/en/cloud/current/ec-api-authentication.html).
 
 ## Environment variables
